@@ -22,7 +22,7 @@ public:
     void send(T &&msg);
     T receive();
 private:
-    std::deque<T> _queue;             // Queue to store traffic light phases
+    std::deque<T> _queue;                             // Queue to store traffic light phases
     std::condition_variable _condition;               // Condition variable for synchronization
     std::mutex _mutex;                                // Mutex for thread-safe access
 };
